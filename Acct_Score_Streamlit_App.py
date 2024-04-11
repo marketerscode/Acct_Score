@@ -7,7 +7,8 @@ from sklearn.preprocessing import StandardScaler
 st.title('Account Scoring')
 st.markdown("Choose the target value and weight of each attribute. The fit score for each account is calculated as the sum of the absolute differences between the account's numerical attribute values and the target values, each multiplied by the corresponding weight, plus the sum of whether the account's categorical attribute values match the preferred categories, each multiplied by the corresponding weight.")
 st.markdown("The scores are normalized to a 100-point scale by dividing each score by the maximum score and then multiplying by 100. There are 3 output columns, the raw fit score [fit_score], normalized fit score [normalized_fit_score], and the ranked raw fit score [fit_score_rank].")
-
+st.markdown("Your uploaded CSV file must contain headers matching the fields as named: 'company_size', 'revenue', 'geo', and 'industry'. The total weight must sum to 100.")
+            
 # Define numerical and categorical attributes
 num_attributes = ['company_size', 'revenue']
 cat_attributes = ['geo', 'industry']
