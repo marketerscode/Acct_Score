@@ -94,12 +94,15 @@ def handle_input():
         df['fit_score'] = df_normalized.apply(lambda row: sum(user_weights[attribute] * abs(row[attribute] - user_targets[attribute]) for attribute in num_attributes), axis=1)
         df['fit_score'] += df[cat_attributes].apply(lambda row: sum(user_weights[attribute] * (row[attribute] == targets[attribute].get()) for attribute in cat_attributes), axis=1)
 
-        # Normalize fit scores to a 100-point scale and convert to integers
+       # Normalize fit scores to a 100-point scale and convert to integers
         max_score = df['fit_score'].max()
         if max_score != 0:
-            df['fit_score'] = (df['fit_score'] / max_score * 100).astype(int)
+            df['normalized_fit_score'] = (df['fit_score'] / max_score * 100).astype(int)
         else:
-            messagebox.showinfo('Notice', 'All fit scores are zero, so normalization is not performed.')
+            st.info('All fit scores are zero, so normalization is not performed.')
+        
+        # Add a column for the rank of the unnormalized fit score
+        df['fit_score_rank'] = df['fit_score'].rank(ascending=False)
 
         # Display results
         output_file = 'scored_accounts.csv'
