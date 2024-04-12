@@ -1,17 +1,43 @@
+"""
+-- Updated the st.markdown statemetns to wrap the lines for better readability on the browser display.
+-- Updated the Column Headers Format to match the required format.
+-- Updated the st.markdown statement to include the required column headers.
+-- Added a function to convert the range to midpoint for the 'Company Size' column.
+"""
+
+
 import streamlit as st
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-#Heading text, introductions and instructions
+# Function to convert range to midpoint
+def convert_range_to_midpoint(value):
+    if '-' in value:
+        lower, upper = value.split('-')
+        return (float(lower) + float(upper)) / 2
+    else:
+        return float(value)
 
-st.title('Account Scoring')
-st.markdown("Choose the target value and weight of each attribute. The fit score for each account is calculated as the sum of the absolute differences between the account's numerical attribute values and the target values, each multiplied by the corresponding weight, plus the sum of whether the account's categorical attribute values match the preferred categories, each multiplied by the corresponding weight.")
-st.markdown("The scores are normalized to a 100-point scale by dividing each score by the maximum score and then multiplying by 100. There are 3 output columns, the raw fit score [fit_score], normalized fit score [normalized_fit_score], and the ranked raw fit score [fit_score_rank].")
-st.markdown("Your uploaded CSV file must contain headers matching the fields as named: 'company_size', 'revenue', 'geo', and 'industry'. The total weight must sum to 100.")
+#Heading text, introductions and instructions
+st.markdown("<h1 style='text-align: center;'>Account Scoring</h1>", unsafe_allow_html=True)
+st.markdown("This App Calculates Fit Scores for Accounts based on their Attributes")
+
+st.markdown("Choose the target value and weight of each attribute. The fit score for each "
+            "account is calculated as the sum of the absolute differences between the "
+            "account's numerical attribute values and the target values, each multiplied by "
+            "the corresponding weight, plus the sum of whether the account's categorical "
+            "attribute values match the preferred categories, each multiplied by the "
+            "corresponding weight.")
+st.markdown("The scores are normalized to a 100-point scale by dividing each score by the "
+            "maximum score and then multiplying by 100. There are 3 output columns, the raw "
+            "fit score [fit_score], normalized fit score [normalized_fit_score], and the "
+            "ranked raw fit score [fit_score_rank].")
+st.markdown("Your uploaded CSV file must contain headers matching the fields as named: "
+            "'Company Size', 'Revenue', 'Geo Location', and 'Industry'. The total weight must sum to 100.")
             
 # Define numerical and categorical attributes
-num_attributes = ['company_size', 'revenue']
-cat_attributes = ['geo', 'industry']
+num_attributes = ['Company Size', 'Revenue']
+cat_attributes = ['Geo Location', 'Industry']
 attributes = num_attributes + cat_attributes
 
 # Create dictionaries to store entries for targets and weights
@@ -38,6 +64,9 @@ def handle_input():
     try:
         # Read account data
         df = pd.read_csv(file_path)
+
+        # Convert 'Company Size' column to midpoints of ranges
+        df['Company Size'] = df['Company Size'].apply(convert_range_to_midpoint)
         
         # Check if CSV file contains all attributes
         if not all(attribute in df.columns for attribute in attributes):
