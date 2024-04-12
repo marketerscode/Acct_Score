@@ -1,11 +1,11 @@
 # Acct_Score
 Score accounts against custom attributes (ie. company size, industry)
 
-Updated: 2024.04.11
+**Updated: 2024.04.11
+**
+**Project Name: Acct_Score**
 
-Project Name: Acct_Score
-
-Project and Work Product Description: 
+**Project and Work Product Description: **
 
 Acct_Score is a tailored solution designed to help businesses efficiently identify and prioritize potential customers that best match their Ideal Customer Profile (ICP). By enabling users to input custom attributes and their corresponding weights, the system calculates "best-fit" scores for prospective accounts. This process not only enhances the effectiveness of sales and marketing strategies but also optimizes resource allocation, leading to increased customer conversion rates. As a standalone, lightweight Python application built with Streamlit, Acct_Score reduces reliance on other complex sales and marketing tools and offers customizable scoring criteria to suit diverse market needs and business objectives.
 	
@@ -13,7 +13,7 @@ Acct_Score is a tailored solution designed to help businesses efficiently identi
 	• TO-BE Workflow: [Insert diagram here] - This diagram will demonstrate how Acct_Score streamlines and enhances the customer evaluation process. [TBD]
 
 
-Description of Solution:
+**Description of Solution:**
 
 Software functions for solving problem(s) step by step: Python script that will be able to intake custom ideal customer profile attributes like company size, geo, revenue, industry, etc via a GUI. The user can modify inputs for weighing attributes. Input csv file of account data to score the fit of them against the ideal customer profile attributes, output csv with scores.
 
@@ -32,9 +32,9 @@ Software functions for solving problem(s) step by step: Python script that will 
      		- Enhanced GUI features for more intuitive user interaction, UI features like sliding scale adjustments
  		- Advanced data validation and error handling to ensure robust application performance.
     
-Solution Design (high-level): [TBD]
+**Solution Design (high-level): [TBD]**
 
-Solution Code Description (low-level design): 
+**Solution Code Description (low-level design): **
 
 This section provides an in-depth look at the code structure, explaining the purpose and functionality of each component of the application.
  
@@ -49,7 +49,7 @@ This section provides an in-depth look at the code structure, explaining the pur
 Actual Working Product Code: [TBD]
     Functions, modules, packages, documentation 
     
-Application Instructions:
+**Application Instructions:**
         Instructions to install, set-up, and use software:
 1. Clone the repository:
 	git clone [https://github.com/marketerscode/Acct_Score/]
