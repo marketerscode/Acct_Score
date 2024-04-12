@@ -1,11 +1,10 @@
 # Acct_Score
 Score accounts against custom attributes (ie. company size, industry)
 
-**Updated: 2024.04.11
-**
+**Updated: 2024.04.11**
 **Project Name: Acct_Score**
 
-**Project and Work Product Description: **
+**Project and Work Product Description:**
 
 Acct_Score is a tailored solution designed to help businesses efficiently identify and prioritize potential customers that best match their Ideal Customer Profile (ICP). By enabling users to input custom attributes and their corresponding weights, the system calculates "best-fit" scores for prospective accounts. This process not only enhances the effectiveness of sales and marketing strategies but also optimizes resource allocation, leading to increased customer conversion rates. As a standalone, lightweight Python application built with Streamlit, Acct_Score reduces reliance on other complex sales and marketing tools and offers customizable scoring criteria to suit diverse market needs and business objectives.
 	
@@ -34,7 +33,7 @@ Software functions for solving problem(s) step by step: Python script that will 
     
 **Solution Design (high-level): [TBD]**
 
-**Solution Code Description (low-level design): **
+**Solution Code Description (low-level design):**
 
 This section provides an in-depth look at the code structure, explaining the purpose and functionality of each component of the application.
  
