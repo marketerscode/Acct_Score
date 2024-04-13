@@ -81,3 +81,64 @@ Rich's 6 D Agile Process:
 
 Jinja2 
 Jinja3 ==> Jinja 
+
+
+
+# README for Account Scoring Streamlit App
+
+## Overview
+
+The Account Scoring Streamlit App is a web-based application that calculates fit scores for accounts based on their attributes. The fit score is a measure of how well an account matches a set of target attribute values and weights specified by the user.
+
+## How it Works
+
+The application uses the Streamlit library to create an interactive user interface. The user can input target values and weights for each attribute, and the application calculates the fit score for each account.
+
+The fit score is calculated as the sum of the absolute differences between the account's numerical attribute values and the target values, each multiplied by the corresponding weight, plus the sum of whether the account's categorical attribute values match the preferred categories, each multiplied by the corresponding weight.
+
+The application also includes a function to convert range values to their midpoint for the 'Company Size' attribute. This function is used to handle attributes that are specified as ranges rather than single values.
+
+## How to Use
+
+To use the application, follow these steps:
+
+1. Open the application in your web browser.
+2. For each attribute, input the target value and weight. For numerical attributes, the target value should be a number. For categorical attributes, the target value should be one of the possible categories.
+3. Click the 'Calculate Fit Scores' button to calculate the fit scores for each account.
+4. The fit scores will be displayed in a table. You can sort the table by any column by clicking on the column header.
+
+## Requirements
+
+To run this application, you will need:
+
+- Python 3.6 or later
+- Streamlit
+- Pandas
+- sklearn
+
+## Installation
+
+To install the required libraries, you can use pip:
+
+```bash
+ install streamlit pandas sklearn
+```
+
+To run the application, use the Streamlit command:
+
+```bash
+streamlit run Acct_Score_Streamlit_App.py
+```
+
+## Future Enhancements
+
+Future enhancements to this application could include:
+
+- Adding more attributes
+- Allowing the user to upload their own data
+- Adding more sophisticated scoring algorithms
+- Improving the user interface
+
+## Contributing
+
+Contributions to this project are welcome. Please fork the repository and create a pull request with your changes.
