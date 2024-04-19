@@ -12,20 +12,20 @@ Acct_Score is a tailored solution designed to help businesses efficiently identi
 
 Software functions for solving problem(s) step by step: Python script that will be able to intake custom ideal customer profile attributes like company size, geo, revenue, industry, etc via a GUI. The user can modify inputs for weighing attributes. Input csv file of account data to score the fit of them against the ideal customer profile attributes, output csv with scores.
 
-		- Intake of Custom Attributes: Users can enter attributes such as company size, geography, revenue, and industry via a graphical user interface.
-		- Weight Modification: Users have the flexibility to adjust the weights of different attributes based on their significance.
-		- Data Processing: The application processes input CSV files containing account data and computes scores based on the predefined attributes and weights.
-  		- Data Cleaning and Normalization: Step to clean data includes removing dollar symbols, converting the column to float, and filling any missing values with the mean of the 		column and convert range values to their midpoints.
-		- Output Generation: Outputs a CSV file with accounts scored against the ideal customer profiles.
+	- Intake of Custom Attributes: Users can enter attributes such as company size, geography, revenue, and industry via a graphical user interface.
+	- Weight Modification: Users have the flexibility to adjust the weights of different attributes based on their significance.
+	- Data Processing: The application processes input CSV files containing account data and computes scores based on the predefined attributes and weights.
+  	- Data Cleaning and Normalization: Step to clean data includes removing dollar symbols, converting the column to float, and filling any missing values with the mean of the column and convert range values to their midpoints.
+	- Output Generation: Outputs a CSV file with accounts scored against the ideal customer profiles.
   
 • MVP 1.0 Features: Basic attribute input, weight adjustments, score calculation, and CSV output.
 • Future Releases (V1.x and beyond): 
- 		- Improve scoring model accuracy (AI and explore packages)
-   		- Improve automatic reading of CSV and auto-populating input fields
- 		- Plans include adding more interactive features for data visualization, real-time data processing, and integration with CRM systems.
+ 	- Improve scoring model accuracy (AI and explore packages)
+   	- Improve automatic reading of CSV and auto-populating input fields
+ 	- Plans include adding more interactive features for data visualization, real-time data processing, and integration with CRM systems.
  • Additional requirements, Graphical User Interfaces (GUI), usability, etc. for later versions
-     		- Enhanced GUI features for more intuitive user interaction, UI features like sliding scale adjustments
- 		- Advanced data validation and error handling to ensure robust application performance.
+     	- Enhanced GUI features for more intuitive user interaction, UI features like sliding scale adjustments
+ 	- Advanced data validation and error handling to ensure robust application performance.
     
 **Solution Design (high-level):**
 
