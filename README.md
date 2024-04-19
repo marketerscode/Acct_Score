@@ -85,6 +85,23 @@ Jinja3 ==> Jinja
 
 
 # README for Account Scoring Streamlit App
+Updated 04/19/2024
+MMBOSTON Updated
+Data Cleaning: Added code to clean the 'Revenue' column in the DataFrame. 
+This includes removing dollar symbols, converting the column to float, and 
+filling any missing values with the mean of the column.
+Categorical Data Handling: Added code to convert all categorical attribute 
+columns to string type. This ensures that all categorical attribute columns 
+contain string data, which is required for the fit score calculation.
+Range to Midpoint Conversion: Updated the convert_range_to_midpoint function 
+to handle non-string inputs. This function is used to convert range values in 
+the 'Company Size' column to their midpoints.
+Error Handling: Improved error handling in the handle_input function. The function 
+now catches exceptions that occur during the fit score calculation and displays an 
+error message in the Streamlit app.
+Normalization: Added code to normalize the numerical account data using the StandardScaler 
+from scikit-learn. This ensures that the numerical attributes are on a similar scale before 
+calculating the fit scores.
 
 ## Overview
 
@@ -142,3 +159,16 @@ Future enhancements to this application could include:
 ## Contributing
 
 Contributions to this project are welcome. Please fork the repository and create a pull request with your changes.
+
+#### Added today 04/19/2024:
+Defined numerical and categorical attributes: You've defined two lists, num_attributes and cat_attributes, to store the names of the numerical and categorical attributes, respectively. You've also created a combined list attributes.
+
+Created dictionaries to store entries for targets and weights: You've created two dictionaries, targets and weights, to store the target values and weights for each attribute.
+
+Added input fields for targets and weights dynamically: You've added a loop that goes through each attribute and adds an input field for its target value and weight. If the attribute is numerical, a number input field is added for the target value. If the attribute is categorical, a text input field is added for the preferred category.
+
+Added a function to select a CSV file: You've added a file uploader that allows the user to select a CSV file.
+
+Added a function to handle user input and calculate scores: This function loads the selected CSV file into a pandas DataFrame, cleans the data, checks if the CSV file contains all attributes and if the attribute columns contain appropriate data, normalizes the numerical account data, calculates the fit scores, replaces any non-finite fit scores with a finite value, normalizes the fit scores to a 100-point scale and converts them to integers, adds a column for the rank of the unnormalized fit score, displays the results, and writes the DataFrame to a CSV file with the current date and time.
+
+Added a submit button: You've added a button that calls the handle_input function when clicked.

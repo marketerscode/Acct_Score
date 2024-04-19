@@ -1,0 +1,45 @@
+Company Size,Revenue,Geo Location,Industry,Company Name,Street Address,City,Postal Code,Country/Region,Phone Number,fit_score,fit_score_rank
+174.5,5000000.0,NY,Finance,"New Mountain Capital, L.L.C.",787 7Th Ave #49,New York,10019.0,United States,(212) 720-0300,0.0,22.5
+7499.5,22000000.0,TN,Healthcare and Pharmaceuticals,"Surgery Partners, Inc.",310 Seven Springs Way Suite 500,Nashville,37027.0,United States,(615) 234-5900,0.0,22.5
+7499.5,110000000.0,IL,Finance,"Guaranteed Rate, Inc.",3940 N Ravenswood Ave,Chicago,60613.0,United States,(773) 290-0505,0.0,22.5
+374.5,8000000.0,CA,Telecommunications,"Truconnect Mobile, Llc",1510 E Florence Ave,Los Angeles,90001.0,United States,(323) 776-9880,0.0,22.5
+10000.0,44000000.0,CO,Food and Beverage,"Nestle Purina Petcare Global Resources, Inc.",900 Long Ridge Rd Building 2,Stamford,6902.0,United States,(203) 629-7243,0.0,22.5
+7499.5,10000000.0,TX,Healthcare and Pharmaceuticals,Children's Health Clinical Operations,1935 Medical District Dr,Dallas,75235.0,United States,(214) 456-7000,0.0,22.5
+374.5,15000000.0,FL,Finance,"Tradestation Group, Inc.",8050 Sw 10Th St,Plantation,33324.0,United States,(954) 652-7000,0.0,22.5
+10000.0,20000000.0,CO,Consumer Goods,Hunter Douglas Inc.,9046 W Bowles Ave,Littleton,80123.0,United States,(303) 972-9393,0.0,22.5
+10000.0,25000000.0,TX,Healthcare and Pharmaceuticals,Memorial Hermann Healthcare System,1431 Studemont St,Houston,77007.0,United States,(346) 701-3800,0.0,22.5
+10000.0,30000000.0,TX,Insurance,Usaa Life Insurance Company,9800 Fredericksburg Rd,San Antonio,78288.0,United States,(210) 531-8722,0.0,22.5
+749.5,35000000.0,TN,Business Services and Consulting,Energysolutions,1009 Commerce Park Drive,Oak Ridge,37830.0,United States,(801) 649-2000,0.0,22.5
+749.5,40000000.0,FL,Retail and Wholesale,Gemaire Distributors,2151 West Hillsboro Boulevard,Deerfield Beach,33442.0,United States,(954) 246-2665,0.0,22.5
+749.5,45000000.0,FL,Manufacturing,Kane's Furniture,15100 Tamiami Trl,Naples,34110.0,United States,(727) 545-9555,0.0,22.5
+749.5,50000000.0,MI,Education - Higher,Kent Intermediate School District,2930 Knapp Street Ne,Grand Rapids,49525.0,United States,(616) 364-1333,0.0,22.5
+749.5,55000000.0,CA,Education - Higher,San Luis Coastal Unified School District,1500 Lizzie Street,San Luis Obispo,93401.0,United States,(805) 549-1200,0.0,22.5
+7499.5,60000000.0,CA,Media and Internet,Activision Blizzard,3100 Ocean Park Blvd,Santa Monica,90405.0,United States,(310) 255-2000,0.0,22.5
+7499.5,65000000.0,TX,Finance,Cliftonlarsonallen,9300 Wade Blvd #101,Frisco,75035.0,United States,(612) 376-4500,0.0,22.5
+2999.5,70000000.0,TX,Education - Higher,"California State University, Dominguez Hills",1000 E Victoria St,Carson,90747.0,United States,(310) 243-3696,0.0,22.5
+2999.5,75000000.0,WA,Retail and Wholesale,Henry Schein,19717 62Nd Avenue South,St Paul,98032.0,United States,(631) 843-5500,0.0,22.5
+2999.5,80000000.0,TX,Consumer Goods,Interstate Batteries,12770 Merit Dr Suite 1000,Dallas,75251.0,United States,(972) 991-1444,0.0,22.5
+10000.0,85000000.0,TX,Retail and Wholesale,7-Eleven Inc,3200 Hackberry Rd,Irving,75063.0,United States,(972) 828-0711,0.0,22.5
+10000.0,90000000.0,NJ,Retail and Wholesale,"Advance Auto Parts, Inc.",1072 U S 9,Parlin,8859.0,United States,(732) 479-4831,0.0,22.5
+10000.0,95000000.0,PA,Healthcare and Pharmaceuticals,Amerisourcebergen,1300 Morris Drive,Chesterbrook,19087.0,United States,(610) 727-7319,0.0,22.5
+10000.0,100000000.0,CA,Manufacturing,Applied Materials,3050 Bowers Avenue,Santa Clara,95054.0,United States,(408) 235-6589,0.0,22.5
+10000.0,105000000.0,MO,Retail and Wholesale,Bass Pro Shops,2500 E Kearney Street,Springfield,65803.0,United States,(417) 873-4402,0.0,22.5
+10000.0,110000000.0,FL,Retail and Wholesale,Beall's,1806 38Th Avenue E,Bradenton,34208.0,United States,(941) 744-4196,0.0,22.5
+10000.0,115000000.0,MN,Retail and Wholesale,Best Buy,7601 Penn Avenue S,Richfield,55423.0,United States,(612) 291-1000,0.0,22.5
+10000.0,120000000.0,PA,Finance,Bny Mellon,500 Grant St,Pittsburgh,15219.0,United States,(412) 923-4657,0.0,22.5
+10000.0,125000000.0,MO,IT Software,Cerner Corporation,2800 Rockcreek Parkway,North Kansas City,64117.0,United States,(816) 221-1024,0.0,22.5
+10000.0,130000000.0,OH,Finance,Charles Schwab,20 Springside Drive,Akron,44333.0,United States,(330) 908-4770,0.0,22.5
+10000.0,135000000.0,CT,Telecommunications,Charter Communications,400 Atlantic Street,Stamford,6901.0,United States,(314) 388-8240,0.0,22.5
+10000.0,140000000.0,CT,Healthcare and Pharmaceuticals,Cigna,900 Cottage Grove Road,Bloomfield,6002.0,United States,(860) 226-6000,0.0,22.5
+10000.0,145000000.0,MI,Manufacturing,Continental Automotive Systems,1 Continental Drive,Auburn Hills,48326.0,United States,(248) 393-5450,0.0,22.5
+10000.0,150000000.0,GA,Telecommunications,Cox Communications,6305-A Peachtree Dunwoody Road,Atlanta,30319.0,United States,(678) 645-0000,0.0,22.5
+10000.0,155000000.0,TX,Retail and Wholesale,Gamestop,625 Westport Parkway,Grapevine,76051.0,United States,(817) 424-2000,0.0,22.5
+10000.0,160000000.0,MI,Manufacturing,General Motors,300 Renaissance Center,Detroit,48243.0,United States,(313) 667-4786,0.0,22.5
+10000.0,165000000.0,MA,IT Hardware,Iron Mountain,1 Federal St,Boston,2110.0,United States,(323) 308-5198,0.0,22.5
+10000.0,170000000.0,WI,Manufacturing,Johnson Controls,5757 N Green Bay Avenue,Glendale,53209.0,United States,(414) 524-1200,0.0,22.5
+10000.0,175000000.0,NC,Retail and Wholesale,"Lowe's Companies, Inc.",509 River Hwy,Mooresville,28117.0,United States,(704) 660-7177,0.0,22.5
+10000.0,180000000.0,CA,Media and Internet,Nbcuniversal,100 Universal Plaza,Universal,91608.0,United States,(212) 664-4000,0.0,22.5
+10000.0,185000000.0,OH,IT Hardware,Ncr,1700 S Patterson Boulevard,Dayton,45409.0,United States,(937) 445-1936,0.0,22.5
+,90219512.19512194,nan,nan,,,,,,,0.0,22.5
+,90219512.19512194,nan,nan,,,,,,,0.0,22.5
+,90219512.19512194,nan,nan,,,,,,,0.0,22.5

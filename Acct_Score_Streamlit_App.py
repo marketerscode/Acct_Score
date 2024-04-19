@@ -1,20 +1,17 @@
-"""
--- MMBOSTON
--- Updated the st.markdown statemetns to wrap the lines for better readability on the browser display.
--- Updated the Column Headers Format to match the required format.
--- Updated the st.markdown statement to include the required column headers.
--- Added a function to convert the range to midpoint for the 'Company Size' column.
-"""
-
+##MMBOSTON UPDATED  
 
 import streamlit as st
 import pandas as pd
+import numpy as np
 from sklearn.preprocessing import StandardScaler
+from datetime import datetime
 
 # Function to convert range to midpoint
 def convert_range_to_midpoint(value):
-    if '-' in value:
-        lower, upper = value.split('-')
+    if pd.isnull(value):
+        return value
+    if '-' in str(value):
+        lower, upper = str(value).split('-')
         return (float(lower) + float(upper)) / 2
     else:
         return float(value)
@@ -60,13 +57,20 @@ file_path = st.file_uploader('Select CSV File', type=['csv'])
 # Function to handle user input and calculate scores
 def handle_input():
     if file_path is None:
-        st.error('Please select a CSV file.')
         return
     try:
-        # Read account data
+        # Load the CSV file into a pandas DataFrame
         df = pd.read_csv(file_path)
 
-        # Convert 'Company Size' column to midpoints of ranges
+        # Clean your data
+        df['Revenue'] = df['Revenue'].replace(r'[\$,]', '', regex=True).astype(float)  # remove dollar symbols and convert to float
+        df.loc[:, 'Revenue'] = df['Revenue'].fillna(df['Revenue'].mean())  # fill missing values with the mean
+
+        # Convert categorical attributes to string type
+        for attribute in cat_attributes:
+            df[attribute] = df[attribute].astype(str)
+
+        # Then you can call convert_range_to_midpoint
         df['Company Size'] = df['Company Size'].apply(convert_range_to_midpoint)
         
         # Check if CSV file contains all attributes
@@ -90,6 +94,10 @@ def handle_input():
         df['fit_score'] = df_normalized.apply(lambda row: sum(weights[attribute] * abs(row[attribute] - targets[attribute]) for attribute in num_attributes), axis=1)
         df['fit_score'] += df[cat_attributes].apply(lambda row: sum(weights[attribute] * (row[attribute] == targets[attribute]) for attribute in cat_attributes), axis=1)
 
+        # Replace any non-finite fit scores with a finite value
+        df['fit_score'] = df['fit_score'].replace([np.inf, -np.inf], np.nan)
+        df['fit_score'] = df['fit_score'].fillna(0)
+
         # Normalize fit scores to a 100-point scale and convert to integers
         max_score = df['fit_score'].max()
         if max_score != 0:
@@ -102,6 +110,11 @@ def handle_input():
 
         # Display results
         st.dataframe(df)
+
+        # Write the DataFrame to a CSV file with current date and time
+        current_date_time = datetime.now().strftime('%Y%m%d_%H%M%S')
+        df.to_csv(f'output_{current_date_time}.csv', index=False)
+
     except Exception as e:
         st.error(f'An error occurred: {str(e)}')
 
