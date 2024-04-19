@@ -27,6 +27,19 @@ st.markdown("""
 - **Step 3:** View the calculated scores and download the results.
 """)
 
+st.markdown("**Notes:**")
+st.markdown("The fit score for each account is calculated as the sum of the absolute differences"
+            "between the account's numerical attribute values and the target values, each multiplied"
+            "by the corresponding weight, plus the sum of whether the account's categorical "
+            "attribute values match the preferred categories, each multiplied by the "
+            "corresponding weight.")
+st.markdown("The scores are normalized to a 100-point scale by dividing each score by the "
+            "maximum score and then multiplying by 100. There are 3 output columns, the raw "
+            "fit score [fit_score], normalized fit score [normalized_fit_score], and the "
+            "ranked raw fit score [fit_score_rank].")
+st.markdown("Your uploaded CSV file must contain headers matching the fields as named: "
+            "'Company Size', 'Revenue', 'Geo Location', and 'Industry'. The total weight must sum to 100.")
+
 # Define attributes
 num_attributes = ['Company Size', 'Revenue']
 cat_attributes = ['Geo Location', 'Industry']
